@@ -34,6 +34,9 @@ body {
     margin: 0;
     font-weight: 700;
 }
+.author span {
+    font-size: .88rem;
+}
 
 .responsive-img img {
     width: 100%;
