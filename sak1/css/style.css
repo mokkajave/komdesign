@@ -29,8 +29,17 @@ body {
     padding: 0 .75rem 0 .75rem;
 }
 
+.img-text p {
+    font-size: .8rem;
+    margin: 0;
+    color: #6e6e6e;
+}
+
+.author {
+    margin-bottom: 1.5rem;
+}
 .author p {
-    font-size: .88rem;
+    font-size: .9rem;
     margin: 0;
     font-weight: 700;
 }
@@ -56,7 +65,7 @@ body {
 
 .text-container {
     width: 100%;
-    margin-top: 2.5rem;
+    margin-top: 2rem;
 }
 
 .quote {
@@ -90,10 +99,6 @@ h3 {
 }
 
 @media (min-width: 720px) {
-    .author {
-        margin-bottom: 4rem;
-    }
-
     .responsive-img {
         padding: 0 .75rem 0 .75rem;
         max-width: 960px;
