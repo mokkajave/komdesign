@@ -43,6 +43,9 @@ body {
     margin: 0;
     font-weight: 700;
 }
+.roles {
+    font-weight: 400;
+}
 .author span {
     font-size: .88rem;
 }
