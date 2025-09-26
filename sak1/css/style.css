@@ -23,12 +23,21 @@ body {
     color: var(--color-text);
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .75rem;
+}
+
 .content-container {
     max-width: 960px;
     margin: 0 auto;
     padding: 0 .75rem 0 .75rem;
 }
 
+.img-text {
+    margin-top: .25rem;
+}
 .img-text p {
     font-size: .8rem;
     margin: 0;
@@ -50,18 +59,23 @@ body {
     font-size: .88rem;
 }
 
+.responsive-img {
+    height: 350px;
+}
 .responsive-img img {
     width: 100%;
-    height: auto;
-    max-height: 350px;
+    height: 100%;
     object-fit: cover;
     border-radius: 0;
 }
 
+.text-img {
+    height: 350px;
+}
+
 .text-img img {
     width: 100%;
-    height: auto;
-    max-height: 350px;
+    height: 100%;
     object-fit: cover;
     border-radius: 2px;
 }
@@ -115,6 +129,32 @@ h3 {
     border-radius: 2px;
 }
 
+.image-overlay {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 2px;
+}
+.image-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+#eye-censor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .6s ease;
+    z-index: 1;
+}
+#eye-censor.visible {
+    opacity: 1;
+}
+
 .base-img, .overlay-img {
     width: 100%;
     height: 100%;
@@ -136,21 +176,23 @@ h3 {
 
 @media (min-width: 720px) {
     .responsive-img {
+        height: 550px;
         padding: 0 .75rem 0 .75rem;
         max-width: 960px;
         margin: 0 auto;
     }
     .responsive-img img {
         width: 100%;
-        height: auto;
-        max-height: 550px;
         object-fit: cover;
         border-radius: 2px;
     }
 
-    .text-img img {
-        height: auto;
-        max-height: 500px;
+    .text-img {
+        height: 500px;
+    }
+
+    .image-overlay {
+        height: 500px;
     }
 
     .text-container {
