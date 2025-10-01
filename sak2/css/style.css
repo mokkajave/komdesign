@@ -38,12 +38,14 @@ body {
 }
 
 .hero-section {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     padding: 6rem 1rem 2rem 1rem;
     min-height: 40vh;
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: flex-end;
 }
 
 .hero-title {
@@ -56,6 +58,17 @@ body {
     transform: translateY(15px);
     animation: slideUp 1s forwards;
 }
+
+.subtitle {
+    font-weight: 800;
+    margin-left: .25rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(15px);
+    animation: slideUp 1s forwards;
+    animation-delay: .25s;
+}
+
 @keyframes slideUp {
     to {
         opacity: 1;
@@ -103,6 +116,10 @@ footer > p {
     
     .hero-title {
         font-size: 6rem;
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
     }
 
     h2 {
