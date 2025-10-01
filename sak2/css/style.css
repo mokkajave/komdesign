@@ -11,7 +11,6 @@ body {
     font-size: 1rem;
     line-height: 1.6;
     color: #1a1a1a;
-    padding: 2rem 1rem;
 }
 
 .content-container {
@@ -20,9 +19,24 @@ body {
 }
 
 .text-container {
-    max-width: 600px;
+    max-width: 700px;
     width: 100%;
     margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.hero-wrapper {
+    background-color: #f7f7f7;
+    box-shadow: 4px 0 12px rgb(0, 0, 0, 0.2)
+}
+
+.hero-section {
+    width: 100%;
+    padding: 6rem 1rem 2rem 1rem;
+    min-height: 40vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
 }
 
 h1, h2 {
@@ -33,12 +47,12 @@ h1, h2 {
 h1 {
     font-size: 4.2rem;
     font-weight: 900;
-    margin-bottom: 2rem;
     line-height: 1.2;
+    color: #1a1a1a;
 }
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 800;
     margin-top: 2rem;
     margin-bottom: 1rem;
@@ -64,5 +78,14 @@ footer {
 @media (min-width: 768px) {
     h1 {
         font-size: 6rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-section {
+        min-height: 60vh;
+        padding: 6rem 1rem 4rem 1rem;
     }
 }
