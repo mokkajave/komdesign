@@ -2,6 +2,8 @@
 
 :root {
     --black: #1a1a1a;
+    --light-gray: #f2f2f2;
+    --accent: #ff3c00;
 }
 
 * {
@@ -30,8 +32,9 @@ body {
 }
 
 .hero-wrapper {
-    background-color: #f7f7f7;
-    box-shadow: 4px 0 12px rgb(0, 0, 0, 0.2)
+    background-color: var(--light-gray);
+    position: relative;
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.2)
 }
 
 .hero-section {
@@ -43,11 +46,21 @@ body {
     justify-content: flex-start;
 }
 
-.page-title {
+.hero-title {
     font-size: 4.2rem;
     font-weight: 900;
     line-height: 1.2;
+    letter-spacing: 1px;
     color: var(--black);
+    opacity: 0;
+    transform: translateY(15px);
+    animation: slideUp 1s forwards;
+}
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 h1, h2 {
@@ -83,16 +96,16 @@ footer > p {
 }
 
 @media (min-width: 768px) {
-    .page-title {
+    .hero-section {
+        min-height: 60vh;
+        padding: 6rem 1rem 4rem 1rem;
+    }
+    
+    .hero-title {
         font-size: 6rem;
     }
 
     h2 {
         font-size: 1.8rem;
-    }
-
-    .hero-section {
-        min-height: 60vh;
-        padding: 6rem 1rem 4rem 1rem;
     }
 }
