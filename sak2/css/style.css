@@ -50,7 +50,7 @@ body {
     justify-content: flex-end;
 }
 .hero-title {
-    font-size: 4.2rem;
+    font-size: 4.5rem;
     font-weight: 900;
     line-height: 1;
     letter-spacing: 1px;
@@ -137,7 +137,7 @@ footer > p {
     }
     
     .hero-title {
-        font-size: 8.2rem;
+        font-size: 8rem;
     }
 
     h2 {
