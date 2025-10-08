@@ -7,6 +7,7 @@
     --light-gray: #f2f2f2;
     --accent: #ff3c00;
     --soft-border: #d9d9d9;
+    --white: #fff;
 }
 
 * {
@@ -22,9 +23,17 @@ body {
     color: var(--black);
 }
 
+a {
+    text-decoration: none;
+}
+
 .content-container {
     max-width: 960px;
     margin: 0 auto;
+}
+
+.content-wrapper {
+    background-color: var(--black);
 }
 
 .text-container {
@@ -32,6 +41,10 @@ body {
     width: 100%;
     margin: 0 auto;
     padding: 2rem 1rem;
+}
+
+.text-white {
+    color: var(--white);
 }
 
 .hero-wrapper {
@@ -56,8 +69,8 @@ body {
     letter-spacing: 1px;
     color: var(--black);
     opacity: 0;
-    transform: translateX(15px) skew(-5deg);
-    animation: driftInSkew 1s ease-out forwards;
+    transform: translateX(30px) skew(-5deg);
+    animation: driftInSkew 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 .subtitle {
     font-weight: 800;
@@ -65,7 +78,7 @@ body {
     text-transform: uppercase;
     opacity: 0;
     transform: translateX(15px);
-    animation: driftIn 1s ease-out forwards;
+    animation: driftIn 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
     animation-delay: 0.25s;
 }
 
@@ -114,10 +127,6 @@ p {
     margin-bottom: 1.5rem;
 }
 
-a {
-    text-decoration: none;
-}
-
 footer {
     height: 80px;
     display: flex;
@@ -130,7 +139,27 @@ footer > p {
     color: var(--mid-gray);
 }
 
-/* Breakpoints */
+/* -----------------------------
+    Animation: Fade Up
+------------------------------*/
+.fade-up {
+    opacity: 0;
+    transform: translateY(15px);
+    filter: blur(2px);
+}
+
+.fade-up.visible {
+    animation: fadeUpMobile 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.fade-up.visible.delay-0 { animation-delay: 0; }
+.fade-up.visible.delay-1 { animation-delay: 0.2s; }
+.fade-up.visible.delay-2 { animation-delay: 0.4s; }
+.fade-up.visible.delay-3 { animation-delay: 0.6s; }
+
+/* -----------------------------
+    Media Query: Desktop
+------------------------------*/
 @media (min-width: 768px) {
     .hero-content {
         min-height: 60vh;
@@ -148,9 +177,31 @@ footer > p {
     footer {
         height: 100px;
     }
+
+    .fade-up {
+        transform: translateY(30px);
+    }
+
+    .fade-up.visible {
+        animation: fadeUpDesktop 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
 }
 
-/* Animations */
+/* -----------------------------
+    Accessibility
+------------------------------*/
+@media (prefers-reduced-motion: reduce) {
+    .fade-up.visible {
+        animation: none !important;
+        opacity: 1;
+        transform: none;
+        filter: none;
+    }
+}
+
+/* -----------------------------
+    Keyframes
+------------------------------*/
 @keyframes driftIn {
     to {
         opacity: 1;
@@ -162,5 +213,31 @@ footer > p {
     to {
         opacity: 1;
         transform: translateX(0) skew(-5deg);
+    }
+}
+
+@keyframes fadeUpMobile {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+        filter: blur(2px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+@keyframes fadeUpDesktop {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+        filter: blur(2px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
     }
 }
