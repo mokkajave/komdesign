@@ -32,15 +32,11 @@ a {
     margin: 0 auto;
 }
 
-.content-wrapper {
-    
-}
-
 .text-container {
     max-width: 700px;
     width: 100%;
     margin: 0 auto;
-    padding: 2rem 1rem;
+    padding: 2rem 0.75rem;
 }
 
 .text-white {
@@ -56,7 +52,7 @@ a {
     align-items: flex-start;
     min-height: 60vh;
     width: 100%;
-    padding: 1rem;
+    padding: 1.5rem 0.75rem;
 }
 .hero-text-box {
     width: 100%;
