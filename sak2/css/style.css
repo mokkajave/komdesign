@@ -58,7 +58,6 @@ a {
     width: 100%;
     padding: 6rem 1rem 2rem 1rem;
     min-height: 40vh;
-    display: flex;
     align-items: flex-start;
     justify-content: flex-end;
 }
