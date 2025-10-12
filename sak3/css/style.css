@@ -8,6 +8,8 @@
     --accent: #ff3c00;
     --soft-border: #d9d9d9;
     --white: #fff;
+
+    --fade-up-distance: 15px;
 }
 
 * {
@@ -44,6 +46,7 @@ a {
 }
 
 .hero-wrapper {
+    position: relative;
     background-color: var(--light-gray);
 }
 .hero-content {
@@ -65,7 +68,7 @@ a {
 }
 .subtitle {
     color: var(--accent);
-    font-weight: 700;
+    font-weight: 800;
     font-family: "Inter", sans-serif;
     text-transform: uppercase;
     margin: 0;
@@ -125,23 +128,23 @@ footer > p {
 ------------------------------*/
 .fade-up {
     opacity: 0;
-    transform: translateY(15px);
-    filter: blur(2px);
+    transform: translateY(var(--fade-up-distance));
+    animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-.fade-up.visible {
-    animation: fadeUpMobile 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-.fade-up.visible.delay-0 { animation-delay: 0; }
-.fade-up.visible.delay-1 { animation-delay: 0.2s; }
-.fade-up.visible.delay-2 { animation-delay: 0.4s; }
-.fade-up.visible.delay-3 { animation-delay: 0.6s; }
+.delay-0 { animation-delay: 0; }
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
 
 /* -----------------------------
     Media Query: Desktop
 ------------------------------*/
 @media (min-width: 768px) {
+    :root {
+        --fade-up-distance: 30px;
+    }
+
     .hero-content {
         min-height: 80vh;
         padding: 2rem 1rem 1rem 1rem;
@@ -158,14 +161,6 @@ footer > p {
     footer {
         height: 100px;
     }
-
-    .fade-up {
-        transform: translateY(30px);
-    }
-
-    .fade-up.visible {
-        animation: fadeUpDesktop 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-    }
 }
 
 /* -----------------------------
@@ -176,35 +171,21 @@ footer > p {
         animation: none !important;
         opacity: 1;
         transform: none;
-        filter: none;
     }
 }
 
 /* -----------------------------
     Keyframes
 ------------------------------*/
-@keyframes fadeUpMobile {
+@keyframes fadeUp {
     from {
         opacity: 0;
-        transform: translateY(15px);
-        filter: blur(2px);
+        transform: translateY(var(--fade-up-distance));
+        
     }
     to {
         opacity: 1;
         transform: translateY(0);
-        filter: blur(0);
-    }
-}
-
-@keyframes fadeUpDesktop {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-        filter: blur(2px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-        filter: blur(0);
+        
     }
 }

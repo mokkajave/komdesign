@@ -32,10 +32,6 @@ a {
     margin: 0 auto;
 }
 
-.content-wrapper {
-    background-color: var(--black);
-}
-
 .text-container {
     max-width: 700px;
     width: 100%;
@@ -68,17 +64,18 @@ a {
     letter-spacing: 1px;
     color: var(--black);
     opacity: 0;
-    transform: translateX(30px) skew(-5deg);
+    transform: translateX(250px) skew(-5deg);
     animation: driftInSkew 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: 0.2s;
 }
 .subtitle {
     font-weight: 800;
     font-family: "Inter", sans-serif;
     text-transform: uppercase;
     opacity: 0;
-    transform: translateX(15px);
+    transform: translateX(35px);
     animation: driftIn 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-    animation-delay: 0.25s;
+    animation-delay: 0.6s;
 }
 
 .divider {
@@ -113,11 +110,12 @@ h1, h2 {
 }
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     font-weight: 800;
     line-height: 1.3;
     margin-top: 2rem;
     margin-bottom: 0.8rem;
+    letter-spacing: 1px;
 }
 
 p {
@@ -139,22 +137,50 @@ footer > p {
 }
 
 /* -----------------------------
-    Animation: Fade Up
+    Animation: Swipe/Fade up
 ------------------------------*/
-.fade-up {
+.color-swipe-section {
+    background-color: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+.color-swipe-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--black);
+    transform: translateX(-100%);
+    transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+    z-index: 0;
+}
+.color-swipe-section .text-container,
+.color-swipe-section .text-container h2,
+.color-swipe-section .text-container p {
+    color: transparent;
+}
+.color-swipe-section.swipe-in::before {
+    transform: translateX(0);
+}
+.color-swipe-section.swipe-in .text-container,
+.color-swipe-section.swipe-in .text-container h2,
+.color-swipe-section.swipe-in .text-container p {
+    color: var(--white);
+}
+
+.fade-up-swipe {
+    --fade-up-distance: 15px;
     opacity: 0;
-    transform: translateY(15px);
-    filter: blur(2px);
 }
-
-.fade-up.visible {
-    animation: fadeUpMobile 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+.fade-up-swipe.visible {
+    animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
-
-.fade-up.visible.delay-0 { animation-delay: 0; }
-.fade-up.visible.delay-1 { animation-delay: 0.2s; }
-.fade-up.visible.delay-2 { animation-delay: 0.4s; }
-.fade-up.visible.delay-3 { animation-delay: 0.6s; }
+.fade-up-swipe.visible.delay-0 { animation-delay: 0; }
+.fade-up-swipe.visible.delay-1 { animation-delay: 0.2s; }
+.fade-up-swipe.visible.delay-2 { animation-delay: 0.4s; }
+.fade-up-swipe.visible.delay-3 { animation-delay: 0.6s; }
 
 /* -----------------------------
     Media Query: Desktop
@@ -170,19 +196,15 @@ footer > p {
     }
 
     h2 {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
     }
 
     footer {
         height: 100px;
     }
 
-    .fade-up {
-        transform: translateY(30px);
-    }
-
-    .fade-up.visible {
-        animation: fadeUpDesktop 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    .fade-up-swipe {
+        --fade-up-distance: 30px;
     }
 }
 
@@ -215,28 +237,13 @@ footer > p {
     }
 }
 
-@keyframes fadeUpMobile {
+@keyframes fadeUp {
     from {
         opacity: 0;
-        transform: translateY(15px);
-        filter: blur(2px);
+        transform: translateY(var(--fade-up-distance));
     }
     to {
         opacity: 1;
         transform: translateY(0);
-        filter: blur(0);
-    }
-}
-
-@keyframes fadeUpDesktop {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-        filter: blur(2px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-        filter: blur(0);
     }
 }
