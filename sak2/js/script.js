@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const observerOptions = {
-        threshold: 0.3
+        threshold: 0.75
     };
 
     // Fade up-seksjon
