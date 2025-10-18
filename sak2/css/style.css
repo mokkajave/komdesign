@@ -98,6 +98,13 @@ a {
 .authors ul li {
     font-size: 0.9rem;
 }
+.author-name {
+    font-weight: 600;
+}
+.author-role {
+    font-weight: 400;
+    color: var(--mid-gray);
+}
 
 .label {
     font-weight: 400;
