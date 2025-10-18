@@ -86,14 +86,17 @@ a {
 }
 .hero-title {
     font-size: clamp(3.8rem, 8vw, 9.2rem);
-    line-height: 1.2;
-    font-weight: 800;
+    line-height: 1.05;
     margin-bottom: 1rem;
+    letter-spacing: 0.1em;
 }
 .subtitle {
-    color: var(--dark-gray);
-    font-weight: 500;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
     font-size: clamp(1.2rem, 2vw, 1.6rem);
+    font-weight: 500;
+    margin-top: 0.5rem;
+    color: var(--mid-gray);
 }
 
 .authors {
@@ -105,26 +108,25 @@ a {
     flex-direction: column;
     justify-content: space-between;
     list-style: none;
+    gap: 0.25rem;
 }
 .authors ul li {
-    letter-spacing: 0.05em;
+    letter-spacing: 0.03em;
+    font-size: 0.75rem;
 }
 .author-name {
     font-weight: 600;
-    font-size: 0.75rem;
     text-transform: uppercase;
-    color: var(--dark-gray);
+    margin-right: 0.3rem;
 }
 .author-role {
     font-weight: 400;
-    font-size: 0.85rem;
-    margin-left: 0.3rem;
+    
     color: var(--mid-gray);
 }
 
 h1, h2 {
-    font-family: "Playfair Display", serif;
-    letter-spacing: 0.02em;
+    font-family: "Bebas Neue", sans-serif;
 }
 
 h2 {
