@@ -10,7 +10,7 @@
     --white: #fff;
     --warm-light: #f5f1ea;
 
-    --fade-up-distance: 15px;
+    --fade-up-distance: 12px;
 }
 
 * {
@@ -88,7 +88,7 @@ a {
     font-size: clamp(3.8rem, 8vw, 9.2rem);
     line-height: 1.05;
     margin-bottom: 1rem;
-    letter-spacing: 0.1em;
+    
 }
 .subtitle {
     font-family: "Playfair Display", serif;
@@ -127,6 +127,7 @@ a {
 
 h1, h2 {
     font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 0.05em;
 }
 
 h2 {
@@ -172,13 +173,14 @@ footer > p {
 .delay-1 { animation-delay: 0.2s; }
 .delay-2 { animation-delay: 0.4s; }
 .delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
 
 /* -----------------------------
     Media Query: Desktop
 ------------------------------*/
 @media (min-width: 768px) {
     :root {
-        --fade-up-distance: 30px;
+        --fade-up-distance: 24px;
     }
 
     h2 {
