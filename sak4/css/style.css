@@ -79,11 +79,19 @@ a {
     transform: translate3d(0, 0, 0);
     will-change: transform;
 }
+.hero-section::before {
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 0;
+}
 .hero-content {
     flex: 1;
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-top: 20vh;
     align-items: center;
     width: 100%;
     transition: transform 0.1s ease-out, opacity 0.3s ease;
@@ -98,10 +106,10 @@ a {
 .hero-title {
     font-size: clamp(3.8rem, 8vw, 9.2rem);
     line-height: 1.05;
+    letter-spacing: 0.02em;
 }
 .subtitle {
-    font-size: clamp(1.2rem, 2vw, 1.8rem);
-    text-transform: uppercase;
+    font-size: clamp(1.125rem, 2vw, 1.8rem);
     font-weight: 400;
     letter-spacing: 0.03em;
 }
@@ -116,6 +124,8 @@ a {
     display: flex;
     justify-content: center;
     width: 100%;
+    margin-top: 2rem;
+    letter-spacing: 0.05em;
     gap: 1rem;
 }
 .authors ul {
@@ -163,10 +173,11 @@ h2 {
     letter-spacing: 0.02em;
     line-height: 1.3;
     margin-bottom: 0.8rem;
+    font-weight: 400;
 }
 
 p {
-    font-size: 1.125rem;
+    font-size: 1rem;
     line-height: 1.85;
     margin-bottom: 1.75rem;
 }
@@ -227,6 +238,10 @@ footer > p {
     }
     .authors ul li {
         font-size: 0.85rem;
+    }
+
+    p {
+        font-size: 1.125rem;
     }
 }
 

@@ -142,6 +142,7 @@ footer {
 footer > p {
     margin: 0;
     color: var(--mid-gray);
+    font-size: 1rem;
 }
 
 /* -----------------------------
