@@ -19,6 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const contentYOffset = scrollPos / CONTENT_FACTOR;
         heroContent.style.transform = `translate3d(0, ${-contentYOffset}px, 0)`;
 
+        const scrollFactor = scrollPos / window.innerHeight;
+        const newOpacity = Math.max(0, 1 - scrollFactor);
+        hero.style.opacity = newOpacity;
+
         ticking = false;
     }
 
@@ -72,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
             })
         },
         {
-            threshold: 0.2
+            threshold: 0.1
         }
     );
     
