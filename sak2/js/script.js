@@ -44,4 +44,21 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".color-swipe-section").forEach(section => {
         swipeObserver.observe(section);
     });
+
+    const summaryButtons = document.querySelectorAll(".summary-button");
+
+    summaryButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const content = button.previousElementSibling;
+            content.classList.toggle("open")
+
+            if (content.classList.contains("open")) {
+                content.style.maxHeight = content.scrollHeight + "px";
+                button.textContent = "Vis mindre";
+            } else {
+                content.style.maxHeight =  "10rem";
+                button.textContent = "Vis mer";
+            }
+        });
+    });
 });
