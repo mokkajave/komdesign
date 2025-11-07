@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
         swipeObserver.observe(section);
     });
 
+    // Knapp
     const summaryButtons = document.querySelectorAll(".summary-button");
 
     summaryButtons.forEach(button => {
