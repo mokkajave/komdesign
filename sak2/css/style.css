@@ -191,7 +191,6 @@ h1, h2, h3 {
 
 h2 {
     font-size: clamp(1.6rem, 4vw, 1.8rem);
-    
     line-height: 1.3;
     margin-top: 2.5rem;
     margin-bottom: 1rem;
@@ -199,7 +198,7 @@ h2 {
 }
 
 h3 {
-    font-size: clamp(1.2rem, 4vw, 1.6rem);
+    font-size: clamp(1.4rem, 4vw, 1.6rem);
 }
 
 p {
@@ -229,7 +228,7 @@ footer > p {
     background-color: var(--white);
     position: relative;
     overflow: hidden;
-    padding-bottom: 2rem;
+    padding-bottom: 1.2rem;
 }
 .color-swipe-section ul {
     padding-left: 1rem;
@@ -250,7 +249,7 @@ footer > p {
     z-index: 0;
 }
 .color-swipe-section .text-container,
-.color-swipe-section .text-container h2,
+.color-swipe-section .text-container h3,
 .color-swipe-section .text-container p {
     color: transparent;
 }
@@ -258,9 +257,16 @@ footer > p {
     transform: translateX(0);
 }
 .color-swipe-section.swipe-in .text-container,
-.color-swipe-section.swipe-in .text-container h2,
+.color-swipe-section.swipe-in .text-container h3,
 .color-swipe-section.swipe-in .text-container p {
     color: var(--white);
+}
+.color-swipe-section h3 {
+    padding-top: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+.color-swipe-section p {
+    font-size: clamp(0.875rem, 2vw, 1.125rem);
 }
 .color-swipe-section .info-container {
     display: grid;
