@@ -229,6 +229,13 @@ footer > p {
     background-color: var(--white);
     position: relative;
     overflow: hidden;
+    padding-bottom: 2rem;
+}
+.color-swipe-section ul {
+    padding-left: 1rem;
+}
+.color-swipe-section img {
+    width: 100%;
 }
 .color-swipe-section::before {
     content: "";
@@ -254,6 +261,10 @@ footer > p {
 .color-swipe-section.swipe-in .text-container h2,
 .color-swipe-section.swipe-in .text-container p {
     color: var(--white);
+}
+.color-swipe-section .info-container {
+    display: grid;
+    grid-template-columns: 1;
 }
 
 .fade-up-swipe {
