@@ -36,11 +36,8 @@ a {
     text-decoration: none;
 }
 
-.intro-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.quote {
+    text-align: center;
 }
 
 .content {
