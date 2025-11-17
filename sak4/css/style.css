@@ -42,11 +42,6 @@ a {
     justify-content: center;
     align-items: center;
 }
-.intro-section p::first-letter {
-    font-size: 5rem;
-    float: left;
-    margin-right: 0.5rem;
-}
 
 .content {
     background-color: var(--white);
