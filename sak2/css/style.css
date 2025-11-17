@@ -39,6 +39,11 @@ a {
     padding: 0 1rem;
 }
 
+.quote {
+    font-style: italic;
+    font-weight: 600;
+}
+
 .text-white {
     color: var(--white);
 }
@@ -228,7 +233,8 @@ footer > p {
     background-color: var(--white);
     position: relative;
     overflow: hidden;
-    padding-bottom: 1.2rem;
+    padding-bottom: 1.5rem;
+    margin-top: 2.5rem;
 }
 .color-swipe-section ul {
     padding-left: 1rem;
