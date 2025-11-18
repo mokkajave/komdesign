@@ -29,6 +29,17 @@ a {
     text-decoration: none;
 }
 
+main {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.snap-section {
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
 .content-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -75,6 +86,7 @@ a {
 }
 
 .authors {
+    margin-top: 2rem;
     margin-bottom: 0.8rem;
 }
 .authors ul {
