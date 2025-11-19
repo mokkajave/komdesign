@@ -35,10 +35,10 @@ main {
     height: 100vh;
 }
 
-.snap-section {
+/* .snap-section {
     height: 100vh;
     scroll-snap-align: start;
-}
+} */
 
 .content-container {
     max-width: 1200px;
