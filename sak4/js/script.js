@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    const summaryButtons = document.querySelectorAll(".summary-button");
+    const summaryButtons = document.querySelectorAll(".info-button");
 
     summaryButtons.forEach(button => {
         button.addEventListener("click", () => {
