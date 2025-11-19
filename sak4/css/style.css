@@ -26,7 +26,7 @@ html, body {
 }
 
 body {
-    font-family: "Inter", sans-serif;
+    font-family: "Merriweather", serif;
     font-size: 1rem;
     line-height: 1.6;
     color: var(--black);
@@ -140,6 +140,7 @@ a {
 }
 
 .authors {
+    font-family: "Inter", sans-serif;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -276,13 +277,14 @@ p {
     font-size: 1rem;
     line-height: 1.85;
     margin-bottom: 1.75rem;
+    letter-spacing: 0.5px;
 }
 p.centered-text {
     text-align: center;
 }
 p.quote {
     font-family: "Merriweather", serif;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.15rem;
     text-align: center;
     line-height: 1.8;
