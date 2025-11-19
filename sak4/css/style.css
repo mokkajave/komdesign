@@ -64,6 +64,7 @@ a {
     text-align: center;
     padding: 2rem 1rem 1rem 1rem;
     border-top: solid 1px var(--soft-border);
+    background-color: var(--light-gray);
 }
 
 .hero-section {
@@ -163,6 +164,7 @@ a {
 }
 
 .info {
+    border-bottom: solid 1px var(--soft-border);
     background-color: var(--light-gray);
     border-radius: 2px;
     position: relative;
@@ -188,7 +190,6 @@ a {
 }
 .info-button:hover {
     background-color: var(--black);
-    transform: translate(-50%, 50%) scale(1.05);
 }
 .info-content {
     color: var(--black);
