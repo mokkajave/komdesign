@@ -26,7 +26,7 @@ html, body {
 }
 
 body {
-    font-family: "Inter", sans-serif;
+    font-family: "Merriweather", serif;
     font-size: 1rem;
     line-height: 1.6;
     color: var(--black);
@@ -63,7 +63,12 @@ a {
 .end-section {
     text-align: center;
     padding: 2rem 1rem 1rem 1rem;
-    border-top: solid 1px var(--soft-border);
+    border-top: solid 1px var(--mid-gray);
+    color: var(--white);
+    background-color: var(--dark-gray);
+}
+.end-section > h2 {
+    color: var(--white);
 }
 
 .hero-section {
@@ -74,18 +79,29 @@ a {
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: var(--light-gray);
+
+    background-image: url("/sak4/media/forlatt.PNG");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
     transform: translate3d(0, 0, 0);
     will-change: transform;
 }
 .hero-section::before {
     content: "";
     position: absolute;
-    background: rgba(0, 0, 0, 0.35);
+    background: rgba(0, 0, 0, 0.3);
     z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 .hero-content {
     flex: 1;
+    color: var(--white);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -95,6 +111,7 @@ a {
     width: 100%;
     transition: transform 0.1s ease-out, opacity 0.3s ease;
     will-change: transform, opacity;
+    z-index: 2;
 }
 .hero-text-box {
     display: flex;
@@ -104,11 +121,13 @@ a {
     gap: 1rem;
 }
 .hero-title {
+    color: var(--white);
     font-size: clamp(4.2rem, 7vw, 8rem);
     line-height: 1.05;
     letter-spacing: 0.02em;
 }
 .subtitle {
+    color: var(--white);
     font-size: clamp(1.125rem, 2vw, 1.8rem);
     font-weight: 400;
     letter-spacing: 0.03em;
@@ -121,6 +140,7 @@ a {
 }
 
 .authors {
+    font-family: "Inter", sans-serif;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -145,7 +165,7 @@ a {
 }
 .author-role {
     font-weight: 400;
-    color: var(--mid-gray);
+    color: var(--light-gray);
 }
 
 .scroll-indicator {
@@ -153,29 +173,30 @@ a {
     bottom: 0.5rem;
     left: 50%;
     transform: translateX(-50%);
-    color: var(--mid-gray);
+    color: var(--white);
     opacity: 0.8;
     animation: float 1s ease-in-out infinite;
     transition: opacity 0.5s ease;
+    z-index: 2;
 }
 .hidden {
     opacity: 0;
 }
 
 .info {
-    background-color: var(--light-gray);
-    border-radius: 2px;
+    background-color: var(--dark-gray);
     position: relative;
     margin-bottom: 5rem;
+    padding-top: 1rem;
 }
 .info-button {
-    background-color: var(--mid-gray);
+    background-color: var(--dark-gray);
+    border: 1px solid var(--white);
     color: var(--white);
     padding: 0.6rem 1.2rem;
     font-size: 0.95rem;
     font-weight: 600;
     text-align: center;
-    border: none;
     border-radius: 2px;
     width: auto;
     transition: all 0.3s ease;
@@ -187,12 +208,15 @@ a {
     z-index: 3;
 }
 .info-button:hover {
-    background-color: var(--black);
-    transform: translate(-50%, 50%) scale(1.05);
+    background-color: var(--white);
+    color: var(--black);
+}
+.info-heading {
+    color: var(--white);
 }
 .info-content {
-    color: var(--black);
-    max-height: 10rem;
+    color: var(--white);
+    max-height: 8rem;
     overflow: hidden;
     position: relative;
     transition: 0.3s ease;
@@ -203,15 +227,31 @@ a {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 1.5rem;
-    background: var(--light-gray);
+    height: 5rem;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--dark-gray));
     transition: 0.3s ease;
+    pointer-events: none;
 }
 .info-content.open {
-    max-height: 500px;
+    max-height: 1000px;
 }
 .info-content.open::after {
     opacity: 0;
+}
+
+.sources {
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+    color: var(--white);
+    padding-left: 1rem;
+}
+.sources a {
+    color: var(--white);
+    text-decoration: underline;
+    transition: 0.2s ease;
+}
+.sources a:hover {
+    color: var(--mid-gray);
 }
 
 h1, h2, h3 {
@@ -235,15 +275,16 @@ h3 {
 
 p {
     font-size: 1rem;
-    line-height: 1.85;
+    line-height: 1.6;
     margin-bottom: 1.75rem;
+    letter-spacing: 0.5px;
 }
 p.centered-text {
     text-align: center;
 }
 p.quote {
     font-family: "Merriweather", serif;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.15rem;
     text-align: center;
     line-height: 1.8;
