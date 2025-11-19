@@ -46,8 +46,23 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }, 50);
 
-    // --- Animasjon --- /
- 
+
+    // --- Interaktiv --- //
+
+    document.querySelectorAll(".extra-info").forEach(section => {
+        const btn = section.querySelector(".toggle-btn");
+        const content = section.querySelector(".extra-info-content");
+
+        btn.addEventListener("click", () => {
+            const isOpen = content.classList.toggle("open");
+            btn.textContent = isOpen ? "Vis mindre" : "Les mer";
+            btn.setAttribute("aria-expanded", isOpen);
+        });
+    });
+
+
+    // --- Animasjon --- //
+
     const observer = new IntersectionObserver(
         (entries) => {
             entries.forEach(entry => {
