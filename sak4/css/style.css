@@ -37,7 +37,10 @@ a {
     text-decoration: none;
 }
 
-.intro {
+.intro-heading {
+    padding-top: 1rem;
+}
+.intro-text {
     font-style: italic;
 }
 
@@ -63,7 +66,6 @@ a {
 .end-section {
     text-align: center;
     padding: 2rem 1rem 1rem 1rem;
-    border-top: solid 1px var(--mid-gray);
     color: var(--white);
     background-color: var(--dark-gray);
 }
@@ -287,6 +289,7 @@ p.quote {
     font-weight: 700;
     font-size: 1.15rem;
     text-align: center;
+    font-style: italic;
     line-height: 1.8;
     margin: 3rem 0;
     padding: 0 1rem;
