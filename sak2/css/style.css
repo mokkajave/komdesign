@@ -226,6 +226,17 @@ footer > p {
     font-size: 1rem;
 }
 
+#driftvideo {
+    display: flex;
+    justify-content: center;
+    video{
+        margin: 4em;
+        width: 50%;
+        height: 50%;
+    }
+    
+}
+
 /* -----------------------------
     Animation: Swipe/Fade up
 ------------------------------*/

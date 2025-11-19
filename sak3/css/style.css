@@ -123,6 +123,16 @@ p {
     margin-bottom: 1.5rem;
 }
 
+#snapbilder{
+    display: flex;
+    justify-content: center;
+
+    img{
+        width: 50%;
+        height: 50%;
+    }
+}
+
 footer {
     height: 80px;
     display: flex;
