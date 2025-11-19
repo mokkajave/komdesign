@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 content.style.maxHeight = content.scrollHeight + "px";
                 button.textContent = "Vis mindre";
             } else {
-                content.style.maxHeight =  "10rem";
+                content.style.maxHeight =  "8rem";
                 button.textContent = "Vis mer";
             }
         });
