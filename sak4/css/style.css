@@ -63,9 +63,9 @@ a {
 .end-section {
     text-align: center;
     padding: 2rem 1rem 1rem 1rem;
-    border-top: solid 1px var(--soft-border);
+    border-top: solid 1px var(--mid-gray);
     color: var(--white);
-    background-color: var(--black);
+    background-color: var(--dark-gray);
 }
 .end-section > h2 {
     color: var(--white);
@@ -184,13 +184,13 @@ a {
 }
 
 .info {
-    background-color: var(--black);
+    background-color: var(--dark-gray);
     position: relative;
     margin-bottom: 5rem;
     padding-top: 1rem;
 }
 .info-button {
-    background-color: var(--black);
+    background-color: var(--dark-gray);
     border: 1px solid var(--white);
     color: var(--white);
     padding: 0.6rem 1.2rem;
@@ -228,7 +228,7 @@ a {
     left: 0;
     width: 100%;
     height: 5rem;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--black));
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--dark-gray));
     transition: 0.3s ease;
     pointer-events: none;
 }
@@ -275,7 +275,7 @@ h3 {
 
 p {
     font-size: 1rem;
-    line-height: 1.85;
+    line-height: 1.6;
     margin-bottom: 1.75rem;
     letter-spacing: 0.5px;
 }
