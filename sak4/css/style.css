@@ -75,20 +75,25 @@ a {
     left: 0;
     width: 100%;
     height: 100vh;
+
     background-image: url("/sak4/media/forlatt.PNG");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
     transform: translate3d(0, 0, 0);
     will-change: transform;
 }
 .hero-section::before {
     content: "";
     position: absolute;
-    background: rgba(0, 0, 0, 0.35);
+    background: rgba(0, 0, 0, 0.3);
     z-index: 0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    z-index: 1;
 }
 .hero-content {
     flex: 1;
@@ -102,6 +107,7 @@ a {
     width: 100%;
     transition: transform 0.1s ease-out, opacity 0.3s ease;
     will-change: transform, opacity;
+    z-index: 2;
 }
 .hero-text-box {
     display: flex;
@@ -166,6 +172,7 @@ a {
     opacity: 0.8;
     animation: float 1s ease-in-out infinite;
     transition: opacity 0.5s ease;
+    z-index: 2;
 }
 .hidden {
     opacity: 0;
