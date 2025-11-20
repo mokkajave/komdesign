@@ -229,12 +229,12 @@ footer > p {
 #driftvideo {
     display: flex;
     justify-content: center;
-    video{
-        margin: 4em;
-        width: 50%;
-        height: 50%;
-    }
     
+    video {
+        margin: 1rem 0 0 0;
+        width: 100%;
+        height: auto;
+    }
 }
 
 /* -----------------------------
@@ -325,6 +325,12 @@ footer > p {
     
     footer {
         height: 100px;
+    }
+
+    #driftvideo {
+        video {
+            max-width: 680px;
+        }
     }
 
     .fade-up-swipe {
