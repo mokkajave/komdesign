@@ -82,7 +82,7 @@ a {
     height: auto;
     object-fit: cover;
 }
-.hero-image figcaption {
+figcaption {
     font-size: 0.85rem;
     color: var(--mid-gray);
     margin-top: 0.5rem;
@@ -229,12 +229,10 @@ footer > p {
 #driftvideo {
     display: flex;
     justify-content: center;
-    
-    video {
-        margin: 1rem 0 0 0;
-        width: 100%;
-        height: auto;
-    }
+    flex-direction: column;
+    max-width: 100%;
+    margin: 1rem 0 0 0;
+    height: auto;
 }
 
 /* -----------------------------
@@ -319,7 +317,8 @@ footer > p {
         height: 600px;
         border-radius: 2px;
     }
-    .hero-image figcaption {
+
+    figcaption {
         margin-left: 0;
     }
     
@@ -328,8 +327,12 @@ footer > p {
     }
 
     #driftvideo {
+        max-width: 680px;
+        margin: 0 auto;
+        padding: 1rem 1rem 0 1rem;
+
         video {
-            max-width: 680px;
+            border-radius: 2px;
         }
     }
 
