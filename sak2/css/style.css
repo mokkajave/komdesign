@@ -41,12 +41,34 @@ a {
 
 .text-image {
     max-width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
 }
 .text-image img {
     width: 100%;
     height: auto;
     border-radius: 2px;
+}
+.text-image figcaption {
+    margin: 0
+}
+
+#driftvideo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 100%;
+    margin: 1rem 0 0 0;
+    height: auto;
+}
+
+figcaption {
+    font-size: 0.75rem;
+    color: var(--mid-gray);
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    text-align: left;
+    text-transform: uppercase;
 }
 
 .quote {
@@ -91,15 +113,6 @@ a {
     width: 100%;
     height: auto;
     object-fit: cover;
-}
-
-figcaption {
-    font-size: 0.85rem;
-    color: var(--mid-gray);
-    margin-top: 0.5rem;
-    margin-left: 1rem;
-    text-align: left;
-    text-transform: uppercase;
 }
 
 .divider {
@@ -237,15 +250,6 @@ footer > p {
     font-size: 1rem;
 }
 
-#driftvideo {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    max-width: 100%;
-    margin: 1rem 0 0 0;
-    height: auto;
-}
-
 /* -----------------------------
     Animation: Swipe/Fade up
 ------------------------------*/
@@ -331,6 +335,7 @@ footer > p {
 
     figcaption {
         margin-left: 0;
+        font-size: 0.85rem;
     }
     
     footer {
