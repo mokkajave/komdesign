@@ -67,25 +67,26 @@ a {
 }
 
 .side-image {
-    display: none;
-    position: absolute;
+    display: block;
+    position: relative;
     width: 260px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
     top: 25%;
     opacity: 0.9;
     z-index: -1;
     background-color: var(--white);
 }
 .side-image.left {
-    left: -280px;
     transform: rotate(-2deg);
 }
 .side-image.right {
-    right: -280px;
     transform: rotate(2deg);
 }
 .side-image img {
     width: 100%;
     height: auto;
+    
     border: 2px solid var(--white);
     box-shadow: 
         0 4px 6px rgba(0, 0, 0, 0.12),
@@ -385,7 +386,13 @@ footer > p {
 
 @media (min-width: 1024px) {
     .side-image {
-        display: block;
+        position: absolute;
+    }
+    .side-image.left {
+        left: -280px;
+    }
+    .side-image.right {
+        right: -280px;
     }
 
     .quote {
