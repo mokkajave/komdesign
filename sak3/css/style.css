@@ -134,16 +134,14 @@ a {
 
 .authors {
     margin-top: 2rem;
-    margin-bottom: 0.8rem;
 }
 .authors ul {
     display: flex;
     flex-direction: column;
-    gap: 0.1rem;
     list-style: none;
 }
 .authors ul li {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
 }
 
 .label {
