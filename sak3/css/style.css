@@ -219,6 +219,11 @@ p {
     }
 }
 
+#aisvindel{
+    height: 100%;
+    width: 100%;
+}
+
 .linkstil{
     text-decoration: underline 2px;
     color: var(--dark-gray);
