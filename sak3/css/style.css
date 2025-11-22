@@ -30,7 +30,7 @@ body {
 }
 
 /* Poll */
-#aiPoll {
+#aiPoll, #deepfakePoll {
     background-color: var(--light-gray);
     border: 1px solid var(--soft-border);
     border-radius: 2px;
@@ -84,13 +84,13 @@ body {
     border-color: var(--accent);
     color: var(--primary);
 }
-#pollResult {
+#pollResult, #deepfakeResult {
     background-color: var(--light-gray);
     border: 1px solid var(--soft-border);
     border-radius: 2px;
     padding: 1rem;
 }
-#pollResult #resultList {
+#pollResult #resultList, #deepfakeResultList {
     list-style: none;
     margin-top: 1rem;
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css" />
-    <title>Hvor går grensen mellom trygghet og kontroll?</title>
+    <title>Generasjon deepfake</title>
 </head>
 <body>
     <main>
@@ -177,6 +177,40 @@
                     </section>
                     <p>Nyhetssendingen på bildet er AI generert men ser helt ekte ut. Utviklingen innenfor deepfake media er urovekkende og det oppfordres at man stiller seg kritisk til det man ser og leser på nett når det ikke kommer direkte fra en troverdig kilde.</p>
                 </p>
+            </section>
+
+            <section class="poll-container text-container">
+                <h3>Har du tillit til medier?</h3>
+                <p>
+                    Hvor trygg føler du deg på det du ser i videoer på nettet?
+                </p>
+
+                <form id="deepfakePoll">
+                    <div class="option">
+                        <input type="radio" name="pollOption" id="opt4" value="very-safe">
+                        <label for="opt4">Veldig trygg</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="pollOption" id="opt5" value="safe">
+                        <label for="opt5">Litt trygg</label>
+                    </div>
+                    <div class="option">
+                        <input  type="radio" name="pollOption" id="opt6" value="skeptical">
+                        <label for="opt6">Litt skeptisk</label>
+                    </div>
+                    <div class="option">
+                        <input  type="radio" name="pollOption" id="opt7" value="very-skeptical">
+                        <label for="opt7">Veldig skeptisk</label>
+                    </div>
+                    <div class="pollBtn">
+                        <button type="submit">Stem</button>
+                    </div>
+                </form>
+
+                <div id="deepfakeResult" style="display:none;">
+                    <h4>Takk for at du deltok</h4>
+                    <ul id="deepfakeResultList"></ul>
+                </div>
             </section>
 
             <section class="text-container">

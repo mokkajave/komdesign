@@ -17,12 +17,13 @@ document.addEventListener("DOMContentLoaded", () => {
     fadeUpElements.forEach(el => observer.observe(el));
 });
 
-// Poll
+// Polls
 window.addEventListener("load", function() {
     const inputs = this.document.querySelectorAll('input[name="pollOption"]');
     inputs.forEach(input => input.checked = false);
 });
 
+// AI
 document.getElementById("aiPoll").addEventListener("submit", function(e) {
     e.preventDefault();
 
@@ -30,9 +31,9 @@ document.getElementById("aiPoll").addEventListener("submit", function(e) {
     if (!choice) return alert('Velg et alternativ før du stemmer.');
 
     const results = {
-        yes: Math.floor(Math.random() * 40 + 30),
-        no: Math.floor(Math.random() * 30 + 10),
-        unsure: Math.floor(Math.random() * 20 + 10)
+        yes: 55,
+        no: 25,
+        unsure: 20
     };
 
     const resultList = document.getElementById("resultList");
@@ -44,4 +45,30 @@ document.getElementById("aiPoll").addEventListener("submit", function(e) {
 
     document.getElementById("aiPoll").style.display = "none";
     document.getElementById("pollResult").style.display = "block";
+});
+
+// Deepfake
+document.getElementById("deepfakePoll").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const choice = document.querySelector('input[name="pollOption"]:checked');
+    if (!choice) return alert('Velg et alternativ før du stemmer.');
+
+    const results = {
+        verySafe: 10,
+        safe: 15,
+        skeptical: 30,
+        verySkeptical: 45
+    };
+
+    const resultList = document.getElementById("deepfakeResultList");
+    resultList.innerHTML = `
+        <li>Veldig trygg: ${results.verySafe}%</li>
+        <li>Trygg: ${results.safe}%</li>
+        <li>Skeptisk: ${results.skeptical}%</li>
+        <li>Veldig skeptisk: ${results.verySkeptical}%</li>
+    `;
+
+    document.getElementById("deepfakePoll").style.display = "none";
+    document.getElementById("deepfakeResult").style.display = "block";
 });
