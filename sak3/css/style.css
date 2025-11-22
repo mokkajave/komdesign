@@ -189,11 +189,39 @@ p {
 #snapbilder{
     display: flex;
     justify-content: center;
+    gap: 0.5rem;
 
     img{
         width: 50%;
         height: 50%;
     }
+}
+
+#snapfilter{
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+
+    img{
+        width: 50%;
+        height: 50%;
+    }
+}
+
+#myai{
+    background-color: var(--light-gray);
+
+    img{
+        height: 50%;
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.linkstil{
+    text-decoration: underline 2px;
+    color: var(--dark-gray);
 }
 
 footer {
