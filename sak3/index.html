@@ -85,20 +85,21 @@
                 </p>
 
                 <form id="aiPoll">
-                    <label>
-                        <input type="radio" name="pollOption" value="yes">
-                        Ja, barn bør beskyttes mot slike verktøy
-                    </label><br>
-                    <label>
-                        <input type="radio" name="pollOption" value="no">
-                        Nei, barn må heller læres opp til å bruke dem riktig
-                    </label><br>
-                    <label>
-                        <input  type="radio" name="pollOption" value="unsure">
-                        Usikker - kommer an på hvordan teknologien brukes
-                    </label><br>
-
-                    <button type="submit">Stem</button>
+                    <div class="option">
+                        <input type="radio" name="pollOption" id="opt1" value="yes">
+                        <label for="opt1">Ja, barn bør beskyttes mot slike verktøy</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="pollOption" id="opt2" value="no">
+                        <label for="opt2">Nei, barn må læres opp til å bruke dem riktig</label>
+                    </div>
+                    <div class="option">
+                        <input  type="radio" name="pollOption" id="opt3" value="unsure">
+                        <label for="opt3">Usikker - kommer an på hvordan teknologien brukes</label>
+                    </div>
+                    <div class="pollBtn">
+                        <button type="submit">Stem</button>
+                    </div>
                 </form>
 
                 <div id="pollResult" style="display:none;">
