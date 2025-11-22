@@ -72,6 +72,16 @@ body {
 .pollBtn button:hover {
     background-color: var(--soft-border);
 }
+#pollResult {
+    background-color: var(--light-gray);
+    border: 1px solid var(--soft-border);
+    border-radius: 2px;
+    padding: 1rem;
+}
+#pollResult #resultList {
+    list-style: none;
+    margin-top: 1rem;
+}
 
 a {
     text-decoration: none;
