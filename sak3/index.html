@@ -60,6 +60,35 @@
                 </p>
             </section>
 
+            <section class="poll-container text-container">
+                <h3>Hva mener du?</h3>
+                <p>
+                    Burde det settes aldersgrense på bruk av AI-verktøy som Snapchat Imagine?
+                </p>
+
+                <form id="aiPoll">
+                    <label>
+                        <input type="radio" name="pollOption" value="yes">
+                        Ja, barn bør beskyttes mot slike verktøy
+                    </label><br>
+                    <label>
+                        <input type="radio" name="pollOption" value="no">
+                        Nei, barn må heller læres opp til å bruke dem riktig
+                    </label><br>
+                    <label>
+                        <input  type="radio" name="pollOption" value="unsure">
+                        Usikker - kommer an på hvordan teknologien brukes
+                    </label><br>
+
+                    <button type="submit">Stem</button>
+                </form>
+
+                <div id="pollResult" style="display:none;">
+                    <h4>Takk for at du deltok</h4>
+                    <ul id="resultList"></ul>
+                </div>
+            </section>
+
             <section class="text-container">
                 <h2>My AI: Når bestevennen er en spion</h2>
                 <p>
