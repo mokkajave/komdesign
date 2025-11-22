@@ -54,10 +54,12 @@ body {
 .option label:hover {
     background-color: var(--primary);
     color: var(--white);
+    border-color: var(--primary);
 }
 .option input[type="radio"]:checked + label {
     background-color: var(--primary);
     color: var(--white);
+    border-color: var(--primary);
 }
 .pollBtn {
     display: flex;
