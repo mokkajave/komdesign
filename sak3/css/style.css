@@ -119,7 +119,7 @@ a {
     position: relative;
     background-color: var(--light-gray);
 
-    background-image: url("/sak3/media/aibanner.png");
+    background-image: url("../media/aibanner.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
