@@ -154,7 +154,7 @@ a {
     letter-spacing: 1px;
 }
 .subtitle {
-    color: var(--accent);
+    color: var(--white);
     font-weight: 800;
     font-family: "Inter", sans-serif;
     text-transform: uppercase;
