@@ -5,7 +5,11 @@
     --dark-gray: #2c2c2c;
     --mid-gray: #5a5a5a;
     --light-gray: #f2f2f2;
-    --accent: #ff3c00;
+    --primary: #1f2937;
+    --accent: #4682b4;
+    --electric: #4f7cac;
+    --arctic: #7ea6d9;
+    --bray: #5d708b;
     --soft-border: #d9d9d9;
     --white: #fff;
 
@@ -48,11 +52,11 @@ body {
     background-color: var(--white);
 }
 .option label:hover {
-    background-color: var(--black);
+    background-color: var(--primary);
     color: var(--white);
 }
 .option input[type="radio"]:checked + label {
-    background-color: var(--black);
+    background-color: var(--primary);
     color: var(--white);
 }
 .pollBtn {
@@ -64,6 +68,7 @@ body {
     margin: 1rem auto 0 auto;
     width: 100%;
     border: 1px solid var(--soft-border);
+    background-color: var(--light-gray);
     border-radius: 6px;
     cursor: pointer;
     font-weight: 600;
@@ -126,7 +131,7 @@ a {
     letter-spacing: 1px;
 }
 .subtitle {
-    color: var(--accent);
+    color: var(--electric);
     font-weight: 800;
     font-family: "Inter", sans-serif;
     text-transform: uppercase;
@@ -188,6 +193,7 @@ footer {
 }
 footer > p {
     margin: 0;
+    font-size: 1rem;
     color: var(--mid-gray);
 }
 
