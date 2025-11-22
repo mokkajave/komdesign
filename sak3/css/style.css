@@ -33,7 +33,7 @@ body {
 #aiPoll, #deepfakePoll {
     background-color: var(--light-gray);
     border: 1px solid var(--soft-border);
-    border-radius: 2px;
+    border-radius: 6px;
     padding: 1rem;
     margin-bottom: 1rem;
 }
@@ -44,7 +44,7 @@ body {
     display: block;
     gap: 8px;
     border: 1px solid var(--soft-border);
-    border-radius: 6px;
+    border-radius: 3px;
     padding: 0.9rem;
     margin-bottom: 0.6rem;
     transition: 0.2s ease;
@@ -73,7 +73,7 @@ body {
     background-color: var(--primary);
     border-color: var(--primary);
     color: var(--white);
-    border-radius: 6px;
+    border-radius: 3px;
     cursor: pointer;
     font-weight: 600;
     font-size: 1rem;
@@ -87,7 +87,7 @@ body {
 #pollResult, #deepfakeResult {
     background-color: var(--light-gray);
     border: 1px solid var(--soft-border);
-    border-radius: 2px;
+    border-radius: 6px;
     padding: 1rem;
 }
 #pollResult #resultList, #deepfakeResultList {
