@@ -118,6 +118,22 @@ a {
 .hero-wrapper {
     position: relative;
     background-color: var(--light-gray);
+
+    background-image: url("/sak3/media/aibanner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.hero-wrapper::before {
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
 }
 .hero-content {
     display: flex;
@@ -132,7 +148,7 @@ a {
     max-width: 100%;
 }
 .hero-title {
-    color: var(--primary);
+    color: var(--white);
     font-size: 4.5rem;
     line-height: 1;
     letter-spacing: 1px;
@@ -147,6 +163,7 @@ a {
 
 .authors {
     margin-top: 2rem;
+    color: var(--white);
 }
 .authors ul {
     display: flex;
